@@ -20,6 +20,6 @@ Route::group(['middleware'=>'auth'],function(){
         return view('layout.blanck_page');
     });
     Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('admin/roles', 'Admin\\rolesController');
+    Route::resource('admin/roles', 'Admin\\rolesController');
 });
+
