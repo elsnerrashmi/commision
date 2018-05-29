@@ -13,9 +13,5 @@
 
 Route::get('/', function () {
     //return view('welcome');
-     return view('layout.blanck_page');
+     return view('layout/master');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
