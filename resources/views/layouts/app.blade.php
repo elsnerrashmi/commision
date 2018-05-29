@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <title>CommisionApp</title>
     <!-- custom-theme -->

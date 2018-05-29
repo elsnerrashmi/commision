@@ -2,9 +2,8 @@
 
 return [
 
-    // 'custom_template' => false,
-     'custom_template' => true,
-
+    'custom_template' => false,
+    
     /*
     |--------------------------------------------------------------------------
     | Crud Generator Template Stubs Storage Path
@@ -14,8 +13,8 @@ return [
     |
      */
 
-    // 'path' => base_path('resources/crud-generator/'),
-     'path' => base_path('resources/layout/master'),
+    'path' => base_path('resources/crud-generator/'),
+     
 
     /**
      * Columns number to show in view's table.
