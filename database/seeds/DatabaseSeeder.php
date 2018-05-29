@@ -11,6 +11,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        \App\User::create([
+            'name' => 'Admin',
+            'email' => 'admin@commisionportal.com',
+            'password' => bcrypt('admin@123'),
+            'role_id' => '1',
+        ]);
     }
 }
