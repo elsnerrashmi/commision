@@ -17,7 +17,7 @@
                                     <li class="dropdown profile_details_drop">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                             <div class="profile_img">   
-                                                <span class="prfil-img"><img src="images/admin.jpg" alt=""> </span> 
+                                                <span class="prfil-img"><img src="{{asset('public/images/admin.jpg')}}" alt=""> </span> 
                                             </div>  
                                         </a>
                                         <ul class="dropdown-menu drp-mnu">
