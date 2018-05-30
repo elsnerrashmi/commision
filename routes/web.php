@@ -14,12 +14,19 @@
 
 Auth::routes();
 
-Route::group(['middleware'=>'auth'],function(){
-    Route::get('/', function () {
-        //return view('welcome');
-        return view('layout.blanck_page');
-    });
+Route::get('/', function () {
+    if ((Auth::user()) && Auth::user()->role_id == '1') {
+        return redirect('admin/home');
+    } else {
+        return redirect('login');
+    }
+});
+
+Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::resource('admin/roles', 'Admin\\rolesController');
+    Route::resource('roles', 'Admin\RolesController');
+    Route::get('settings', 'Admin\SettingController@index');
+    Route::post('settings/update', 'Admin\SettingController@update');
+
 });
 

@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use App\role;
+use App\Role;
 use Illuminate\Http\Request;
 
-class rolesController extends Controller
+class RolesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,10 +19,10 @@ class rolesController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $roles = role::where('role_name', 'LIKE', "%$keyword%")
+            $roles = Role::where('role_name', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
-            $roles = role::latest()->paginate($perPage);
+            $roles = Role::latest()->paginate($perPage);
         }
 
         return view('admin.roles.index', compact('roles'));
@@ -51,10 +49,12 @@ class rolesController extends Controller
     {
         
         $requestData = $request->all();
-        
-        role::create($requestData);
 
-        return redirect('admin/roles')->with('flash_message', 'role added!');
+        Role::create($requestData);
+
+        flash(config('messages.role.create'));
+
+        return redirect('admin/roles');
     }
 
     /**
@@ -66,7 +66,7 @@ class rolesController extends Controller
      */
     public function show($id)
     {
-        $role = role::findOrFail($id);
+        $role = Role::findOrFail($id);
 
         return view('admin.roles.show', compact('role'));
     }
@@ -80,7 +80,7 @@ class rolesController extends Controller
      */
     public function edit($id)
     {
-        $role = role::findOrFail($id);
+        $role = Role::findOrFail($id);
 
         return view('admin.roles.edit', compact('role'));
     }
@@ -97,11 +97,13 @@ class rolesController extends Controller
     {
         
         $requestData = $request->all();
-        
-        $role = role::findOrFail($id);
+
+        $role = Role::findOrFail($id);
         $role->update($requestData);
 
-        return redirect('admin/roles')->with('flash_message', 'role updated!');
+        flash(config('messages.role.update'));
+
+        return redirect('admin/roles');
     }
 
     /**
@@ -113,7 +115,9 @@ class rolesController extends Controller
      */
     public function destroy($id)
     {
-        role::destroy($id);
+        Role::destroy($id);
+
+        flash(config('messages.role.delete'));
 
         return redirect('admin/roles')->with('flash_message', 'role deleted!');
     }
