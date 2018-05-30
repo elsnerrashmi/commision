@@ -5,3 +5,7 @@
     <link href="{{asset('public/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{asset('public/css/font-awesome.css')}}" rel="stylesheet" type="text/css" media="all" />
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+    
+   <!-- ***********************boostrape data tbale start  ************************************* -->
+     <link href="{{asset('public/css/datatable/dataTables.bootstrap.min.css')}}" rel="stylesheet" type="text/css" media="all" />
+   <!-- ***********************boostrape data tbale end  ************************************* -->

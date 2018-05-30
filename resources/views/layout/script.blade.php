@@ -49,3 +49,16 @@ $(function () {
 
 <script type="text/javascript" src="{{ asset('public/js/bootstrap-3.1.1.min.js') }}"></script>
 
+<!-- ***********************j query validation start************************************* -->
+
+<script type="text/javascript" src="{{ asset('public/js/jquery.validate.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('public/js/custome/additional-methods.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('public/js/custome/form-validation.js') }}"></script>
+
+<!-- ***********************j query validation end ************************************* -->
+
+<!-- ***********************boostrape data tbale start ************************************* -->
+<script type="text/javascript" src="{{ asset('public/js/datatable/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('public/js/datatable/dataTables.bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('public/js/custome/datatable.js') }}"></script>
+<!-- ***********************boostrape data tbale end  ************************************* -->
