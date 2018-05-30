@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-    <title>CommisionApp</title>
-    <!-- custom-theme -->
+    <title>{{$settings['site_name']}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Esteem Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -17,15 +16,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     @include('layout.stylesheet')
 </head>
 <body>
-<!-- /pages_agile_info_w3l -->
 
 <div class="pages_agile_info_w3l">
-    <!-- /login -->
     <div class="over_lay_agile_pages_w3ls">
         @yield('contents')
-    </div>
-    <div class="copyrights_agile">
-        <p>© 2018 CommisionPortal. All Rights Reserved.</p>
+        <div class="copyrights_agile">
+            <p>© {{date('Y')}} {{$settings['footer_text']}}</p>
+        </div>
     </div>
 
 </div>
