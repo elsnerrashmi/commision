@@ -21,7 +21,7 @@ class CreateDealsTable extends Migration
             $table->integer('Acct_ID')->unsigned()->nullable();
             $table->integer('EnteredByDTUser_ID')->unsigned()->nullable();
             $table->string('EnteredByDTUserName');
-            $table->enum('status', ['0', '1','5','6','7','8','98','99'])->comment('0=Prospect,1=Working,5=Contracted,6=Spot Delivered,7=Cancelled,8=Contracted/Booked,98=Transferred - Failed,99=Transferred');
+            $table->enum('status', ['0', '1', '5', '6', '7', '8', '98', '99'])->comment('0=Prospect,1=Working,5=Contracted,6=Spot Delivered,7=Cancelled,8=Contracted/Booked,98=Transferred-Failed,99=Transferred');
             $table->string('StatusDesc');
             $table->dateTime('StatusDate');
             $table->dateTime('DateCreated');
@@ -29,7 +29,6 @@ class CreateDealsTable extends Migration
             $table->string('CreationMethodDesc');
             $table->dateTime('LastModified');
             $table->string('AssignedLocationName');
-            $table->string('CreationMethodDesc');
             $table->string('DesiredDealTypeDesc');
             $table->string('SalesPerson1Name');
             $table->string('SalesPerson2Name');
@@ -82,7 +81,6 @@ class CreateDealsTable extends Migration
             $table->dateTime('ExpDate');
             $table->integer('SalesPerson1_ID')->unsigned()->nullable();
             $table->integer('SalesPerson2_ID')->unsigned()->nullable();
-            $table->integer('InsAgentFax1');
             $table->integer('SalesPerson1Percentage');
             $table->integer('SalesPerson2Percentage');
             $table->integer('FIPerson_ID')->unsigned()->nullable();
@@ -100,7 +98,7 @@ class CreateDealsTable extends Migration
             $table->integer('LeadReceiptMethod_ID')->unsigned()->nullable();
             $table->string('LeadReceiptMethodDesc');
 
-            $table->enum('DealType', ['0', '1','2','3','4','5','6'])->comment('0=Unknown,1=Walk-In,2=Phone,3=Email,4=Web,5=Import,6=Lead Company');
+
             $table->string('ReferralTypeDesc');
             $table->string('ReferralName');
           
