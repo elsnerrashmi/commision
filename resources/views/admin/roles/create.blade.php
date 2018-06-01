@@ -15,7 +15,8 @@
                         </button>
                     </a>
 
-                        <form method="POST" action="{{ url('/admin/roles') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                    <form method="POST" action="{{ url('/admin/roles') }}" accept-charset="UTF-8"
+                          class="form-horizontal" id="validate_form" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
                             @include ('admin.roles.form')

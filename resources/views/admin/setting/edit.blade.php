@@ -15,7 +15,7 @@
                         'url' => ['/admin/settings/update'],
                         'class' => 'form-horizontal',
                         'files' => true,
-                        'id'    => 'settings_form'
+                        'id'    => 'validate_form'
                     ]) !!}
 
                     @include ('admin.setting.form', ['submitButtonText' => 'Update'])
@@ -27,7 +27,5 @@
         </div>
     </div>
 @endsection
-@section('custom_js')
 
-@endsection
 

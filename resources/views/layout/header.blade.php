@@ -14,12 +14,16 @@
                     <li class="dropdown profile_details_drop">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <div class="profile_img">
-                                <span class="prfil-img"><img src="{{asset('public/images/admin.jpg')}}" alt=""> </span>
+                                <span class="prfil-img"><img
+                                            src="{{asset('public/user/profile/'.Auth::user()->profile_pic)}}"
+                                            alt=""> </span>
                             </div>
                         </a>
                         <ul class="dropdown-menu drp-mnu">
+                            <li style="border-bottom: 1px dotted black"><a style="cursor: text">
+                                    <h3>{{Auth::user()->name}}</h3></a></li>
                             <li><a href="{{url('admin/settings')}}"><i class="fa fa-cog"></i> Settings</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                            <li><a href="{{url('admin/profile')}}"><i class="fa fa-user"></i> Profile</a></li>
                             <li>
                                 <a href="{{ route('logout') }}"
                                    onclick="event.preventDefault();

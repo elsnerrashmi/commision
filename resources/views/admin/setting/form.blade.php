@@ -51,7 +51,7 @@
 </div>
 <div class="line line-dashed b-b line-lg pull-in"></div>
 <div class="form-group">
-    <div class="col-md-offset-4 col-md-4">
-        {!! Form::submit(isset($submitButtonText) ? $submitButtonText : 'Create', ['class' => 'btn btn-primary','id'=>'settings_submit']) !!}
+    <div class="col-md-offset-5 col-md-4">
+        {!! Form::submit(isset($submitButtonText) ? $submitButtonText : 'Create', ['class' => 'btn btn-primary','id'=>'validate_submit']) !!}
     </div>
 </div>

@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,8 +9,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
 Auth::routes();
 
 Route::get('/', function () {
@@ -27,6 +24,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::resource('roles', 'Admin\RolesController');
     Route::get('settings', 'Admin\SettingController@index');
     Route::post('settings/update', 'Admin\SettingController@update');
-
+    Route::get('profile', 'ProfileController@edit');
+    Route::post('profile/update', 'ProfileController@update');
 });
 

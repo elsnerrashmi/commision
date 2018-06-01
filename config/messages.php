@@ -14,4 +14,7 @@ return [
     'settings' => [
         'update' => 'Settings updated successfully.',
     ],
+    'profile' => [
+        'update' => 'Profile updated successfully.',
+    ],
 ];

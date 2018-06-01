@@ -8,7 +8,9 @@ $(document).ready(function () {
         $(".alert").fadeOut();
     }, 3000);
 
-
+    $("#validate_submit").click(function () {
+        $("#validate_form").validate();
+    });
     /* $(".datepicker").datepicker({
      dateFormat: 'yy-mm-dd'
      });

@@ -19,7 +19,7 @@ class SettingsRepository
 {
     /**
      * SettingsRepository constructor.
-     * @param \App\Models\Backend\Setting $setting
+     * @param \App\Models\Setting $setting
      */
     function __construct(Setting $setting)
     {

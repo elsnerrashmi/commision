@@ -12,4 +12,7 @@ return [
     'footer_text' => 'All rights reserved.',
     'sms_api_key' => '156178Aixs1tCkfUOP5940eb72',
     'no_product_image' => 'no-image.png',
+    'api_username' => '',
+    'api_password' => '',
+    'api_url' => '',
 ];
